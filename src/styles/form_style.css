@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.logo{
+  flex-direction: row;
+  align-items: center;  
+  font-weight: bold;
+}
+.login_image{
+  height: 80px;
+  width: 80px;
+  vertical-align: middle;
+}
+
+header {
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  background-color: #BCBF5A;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+}
+
+.despesa_total{
+  flex-direction: row;
+}
+.form_container{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  background-color: #F2E9BD;
+}
+.descricao{
+  width: 200px;
+  border-radius: 5px;
+}
+.div_form label{
+  margin: 5px 5px;
+}
+.valueI{
+  width: 100px;
+  height: 30px;
+  border: 2px solid #D8B568;
+  border-radius: 5px;
+}
+.div_form select{
+  width: 120px;
+  height: 35px;
+  border: 2px solid #D8B568;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.descricao{
+  width: 200px;
+  height: 30px;
+  border: 2px solid #D8B568;
+  border-radius: 5px;
+}
+.div_form button{
+  height: 37px;
+  width: 150px;
+  margin: 0px 5px;
+  background-color: #BF9F78;
+  border: 2px solid #D8B568;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import '../styles/table_style.css';
 
 class Table extends React.Component {
   render() {
@@ -20,7 +21,7 @@ class Table extends React.Component {
             <th>Editar/Excluir</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody cellPadding={'10px'} cellspacing={'0px'}>
           {expenses.map((elem) => (
             <tr key={ elem.id }>
               <td>{elem.description}</td>
@@ -36,7 +37,7 @@ class Table extends React.Component {
               <td>Real</td>
               <td>
                 <button type="button">Editar</button>
-                <button type="button">Editar</button>
+                <button type="button">Excluir</button>
               </td>
             </tr>))}
         </tbody>

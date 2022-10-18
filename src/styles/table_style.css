@@ -1,0 +1,36 @@
+table, th, td{
+  border: 2px solid #D8B568;
+}
+
+table{
+  border-collapse: collapse;
+  margin: 5px 0px;
+}
+
+th, td{
+  padding: 10px;
+  text-align: center;
+  width: 120px;
+}
+
+th{
+  font-weight: bold;
+}
+  
+  
+tr:nth-child(even){ 
+  background-color: #F2F2F2;
+}
+  
+tr:hover:nth-child(1n + 2){
+  background-color: #F2E9BD;
+  color: black; /* muda a cor da letra tambem */
+}
+
+table button{
+  background-color: #BF9F78;
+  border: 2px solid #D8B568;
+  width: 55px;
+  margin: 3px 3px;
+  border-radius: 5px;
+}

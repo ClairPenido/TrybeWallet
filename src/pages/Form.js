@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { saveExpenses } from '../actions';
+import '../styles/form_style.css';
 
 class Form extends React.Component {
   constructor() {
@@ -43,28 +44,19 @@ class Form extends React.Component {
     const { value, description, currency, method, tag } = this.state;
     const { currencies } = this.props;
     return (
-      <form onSubmit={ this.handleSubmit }>
-        <label htmlFor="value-input">
-          Valor da despesa:
+      <form
+      className='form_container' onSubmit={ this.handleSubmit }>
+        <div className='div_form'>
+        <label htmlFor="value-input" >
+          Valor: 
           {' '}
           <input
+            className='valueI'
             data-testid="value-input"
             id="value-input"
             name="value"
             type="number"
             value={ value }
-            onChange={ this.handleChange }
-          />
-        </label>
-        <label htmlFor="description-input">
-          Descrição:
-          {' '}
-          <input
-            data-testid="description-input"
-            id="description-input"
-            type="textArea"
-            name="description"
-            value={ description }
             onChange={ this.handleChange }
           />
         </label>
@@ -97,7 +89,7 @@ class Form extends React.Component {
           </select>
         </label>
         <label htmlFor="tag-input">
-          Método de pagamento:
+          Tag:
           {' '}
           <select
             data-testid="tag-input"
@@ -113,12 +105,26 @@ class Form extends React.Component {
             <option value="Saúde">Saúde</option>
           </select>
         </label>
+        <label htmlFor="description-input" >
+          Descrição:
+          {' '}
+          <input
+          className='descricao'
+            data-testid="description-input"
+            id="description-input"
+            type="textArea"
+            name="description"
+            value={ description }
+            onChange={ this.handleChange }
+          />
+        </label>
         <button
           type="submit"
           onClick={ this.addDespesa }
         >
           Adicionar despesa
         </button>
+        </div>
       </form>
     );
   }

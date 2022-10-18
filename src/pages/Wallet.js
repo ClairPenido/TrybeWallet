@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import { saveCurrencies } from '../actions';
 import Form from './Form';
 import Table from './Table';
-import '../styles/style.css';
+import carteira from '../styles/images/carteira2.png';
+
 
 class Wallet extends React.Component {
   constructor() {
@@ -40,21 +41,24 @@ class Wallet extends React.Component {
     const { currencies } = this.state;
     return (
       <div>
-        <h1>TrybeWallet</h1>
-        <header>
-          <h3 data-testid="email-field">{email}</h3>
-          <h3 data-testid="total-field">
-            { this.calcDespesaTotal() }
-          </h3>
-          <h3 data-testid="header-currency-field">
-            {' '}
-            {currencies}
-            {' '}
-          </h3>
-          <Form />
+      <header>
+        <p className='logo'>
+      <img className='login_image' src= {carteira} alt='imagem_carteira'/>
+        TrybeWallet
+        </p>
+        <p data-testid="email-field"> email:{' '}{email}</p>
+        <div className='despesa_total'>
+        <span data-testid="total-field"> despesa total: {' '}
+          { this.calcDespesaTotal() }
+        </span>
+        <span data-testid="header-currency-field">
+          {' '}
+          {currencies}
+        </span>
+        </div>
         </header>
+        <Form />
         <Table />
-
       </div>
     );
   }

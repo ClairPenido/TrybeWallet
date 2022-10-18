@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router-dom';
 import { saveInputs } from '../actions';
-import '../styles/style.css';
+import '../styles/login_style.css';
+import carteira from '../styles/images/carteira2.png';
+
 
 class Login extends React.Component {
   constructor() {
@@ -44,41 +46,41 @@ class Login extends React.Component {
       redirect,
     } = this.state;
     return (
-      <form onSubmit={ this.handleSubmit }>
+      <div id='div-mor'>
+      <form className='div_login' onSubmit={ this.handleSubmit }>
+        <p>Bem-vindo ao TrybeWallet!</p>
+        <img className='login_image' src= {carteira} alt='imagem_carteira'/>
         {redirect && <Redirect to="/carteira" />}
-        <div>
-        <label htmlFor="email">
-          Email:
-          {' '}
+        <label className='login_input' htmlFor="email">
           <input
             id="email"
             type="email"
             name="email"
+            placeholder='email'
             value={ email }
             onChange={ this.onChangeInput }
             data-testid="email-input"
           />
         </label>
-        <label htmlFor="senha">
-          Senha:
-          {' '}
+        <label className='login_input' htmlFor="senha">
           <input
             id="senha"
             type="password"
             name="senha"
+            placeholder='senha'
             value={ senha }
             onChange={ this.onChangeInput }
             data-testid="password-input"
           />
         </label>
-        <button
+        <button className='botao_login'
           type="submit"
           disabled={ !this.checkInputs() }
         >
           Entrar
         </button>
-        </div>
       </form>
+      </div>
     );
   }
 }
