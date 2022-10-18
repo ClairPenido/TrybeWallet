@@ -24,7 +24,7 @@ tr:nth-child(even){
   
 tr:hover:nth-child(1n + 2){
   background-color: #F2E9BD;
-  color: black; /* muda a cor da letra tambem */
+  color: black; /* muda a cor da letra  */
 }
 
 table button{
